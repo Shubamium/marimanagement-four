@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@keyframes speen {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+button {
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+  text-decoration: none;
+  color: black;
+}
+
+.btn {
+  cursor: pointer;
+  transition: all 200ms ease;
+  &:hover {
+    scale: 1.05;
+  }
+  &:active {
+    scale: 0.95;
+  }
+}
+
+.btn-primary {
+  background: url("/background/zigzag_16.png"), #439aff;
+  outline: 4px solid #3d6ea6;
+  outline-offset: -1px;
+  color: white;
+  border-radius: 0.25em;
+  font-family: var(--fontH);
+  font-size: 1.4rem;
+  padding: 0.4em 2em;
+  border-bottom: 4px solid #3d6ea6;
+  text-shadow: 0px 2px rgba(0, 0, 0, 0.196);
+  position: relative;
+  .extra {
+    position: absolute;
+    right: 5%;
+    top: -30%;
+    font-size: 1rem;
+    color: #ff7008;
+    text-shadow: -1px -1px white, 1px 1px white, -1px 1px white, 1px -1px white;
+    animation: bounce 2s infinite alternate-reverse ease-in-out;
+    @keyframes bounce {
+      from {
+        scale: 0.8;
+      }
+      to {
+        scale: 1;
+      }
+    }
+  }
+}
+.btn-secondary {
+  background: url("/background/zigzag_16.png"), #2f4057;
+  outline: 3px solid #2f4057;
+  outline-offset: -1px;
+  color: white;
+  border-radius: 0.25em;
+  font-family: var(--fontH);
+  font-size: 1.4rem;
+  padding: 0.4em 2em;
+  border-bottom: 4px solid #2a3b52;
+  text-shadow: 0px 2px rgba(0, 0, 0, 0.196);
+  position: relative;
+}
+body {
+  background: #fff2d9;
+  max-width: 100%;
+  overflow-x: hidden;
+  // min-height: 100vh;
+}
+.common-heading {
+  font-size: 3.4rem;
+  color: #2f4057;
+  text-shadow: 3px 3px white, -3px -3px white, 3px 0 white, 0px 3px white,
+    -3px 0 white, 0px -3px white;
+  text-transform: uppercase;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.185));
+}
+.common-p {
+  color: #2f4156;
+  font-size: 1rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+b {
+  font-family: var(--fontH);
+}
+p {
+  font-family: var(--fontP);
+}
+
+a {
+  text-decoration: none;
+}

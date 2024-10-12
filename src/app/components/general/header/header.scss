@@ -1,0 +1,97 @@
+#header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  // background: red;
+  z-index: 1000;
+  width: 100%;
+  margin: 1em;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -250px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: #ff934527;
+    z-index: -2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -550px;
+    right: -320px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: #ff934527;
+    z-index: -2;
+  }
+  #nav {
+    width: min(90%, 1800px);
+    background: url("/background/zigzag.png"), #2f4057;
+    border-radius: 2em;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    box-shadow: 2px 2px 4px rgba(50, 54, 105, 0.683);
+    padding: 0.45em 2em;
+    align-items: center;
+    .left-nav {
+      display: flex;
+      gap: 1em;
+      padding: 0.2em;
+      font-size: 1.2rem;
+      .btn-nav {
+        background: white;
+        padding: 0.25em 1em;
+        box-shadow: 1px 3px 0px #1d293cb3;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        padding-right: 1.4em;
+        border-radius: 0.25em;
+        color: #2f4057;
+        svg {
+          border-radius: 50%;
+          padding: 0.25em;
+          width: 30px;
+          height: 30px;
+          transition: all 100ms ease-out;
+        }
+        &:hover,
+        .active {
+          background: #3f8fec;
+          color: white;
+          svg {
+            background: white;
+            color: #3f8fec;
+          }
+        }
+      }
+    }
+    .right-nav {
+      .nav-main {
+        background: #ff9345;
+        padding: 0.55em 1em;
+        box-shadow: 1px 3px 0px #1d293cb3;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        padding-right: 1.5em;
+        border-radius: 0.25em;
+        color: white;
+
+        .active {
+          background: #3f8fec;
+          color: white;
+          svg {
+            background: white;
+            color: #3f8fec;
+          }
+        }
+      }
+    }
+  }
+}

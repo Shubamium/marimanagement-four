@@ -1,0 +1,183 @@
+#page_home {
+  margin-top: 100px;
+  min-height: 5000px;
+  .s-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    .hero-title {
+      margin: 40px 0;
+      font-size: 2rem;
+      text-align: center;
+      max-width: min(1400px, 90%);
+      position: relative;
+      .decor_triangle {
+        position: absolute;
+        left: 10%;
+        top: -35%;
+        animation: speen 35s infinite linear;
+        transform-origin: 60% 55%;
+        z-index: -2;
+        scale: 0.9;
+        transition: all 500ms ease;
+      }
+      &:hover {
+        .decor_triangle {
+          scale: 0.8;
+        }
+        h1,
+        h2 {
+          scale: 1.1;
+        }
+      }
+      h1,
+      h2 {
+        transition: all 250ms ease;
+      }
+      h1 {
+        color: #439aff;
+        text-shadow: 0px 4px #2f4057;
+        font-size: 5rem;
+        // margin: 0.2em 0;
+        line-height: 90%;
+      }
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      gap: 1.25em;
+      margin: 3em 0;
+    }
+    .main-desc {
+      max-width: 1000px;
+      text-align: center;
+      color: #2f4057;
+      letter-spacing: 1px;
+    }
+    .next {
+      margin-top: 3em;
+    }
+  }
+
+  .service {
+    max-width: 1200px;
+    margin: 200px auto;
+
+    .heading {
+      // display: flex;
+      // justify-content: space-between;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2em;
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .service-list {
+      display: grid;
+      // grid-template-columns: 1f;
+      display: flex;
+      gap: 1.2em;
+      margin-top: 120px;
+
+      &:has(.service-card:hover) {
+        .service-card {
+          scale: 0.9;
+          // rotate: 2deg;
+          filter: brightness(80%);
+        }
+      }
+      .service-card {
+        background: #fafafc;
+        border-radius: 1em;
+        outline: 4px solid #67778a;
+        border-bottom: 4px solid #67778a;
+        padding: 1.5em;
+        transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+        position: relative;
+        top: 0%;
+        &:hover {
+          filter: brightness(100%) !important;
+          rotate: 2deg;
+
+          scale: 1.1 !important;
+          z-index: 100;
+        }
+        &:nth-child(1) {
+          transform: translateY(100px);
+        }
+        &:nth-child(2) {
+          transform: translateY(50px);
+        }
+
+        .service-h {
+          h3 {
+            font-size: 1.7rem;
+            color: #67778a;
+          }
+          .subs {
+            background-color: #e3e8ec;
+            padding: 0.25em 0.8em;
+            border-radius: 1em;
+            color: #67778a;
+          }
+          .desc {
+            padding: 1em 0;
+            color: #67778a;
+          }
+          .bp {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            // padding: 1em;
+            .bp-item {
+              font-family: var(--fontH);
+
+              font-size: 1.2rem;
+              list-style-type: none;
+              background: #e3e8ec;
+              color: #67778a;
+              padding: 0.25em 0.5em;
+              border-radius: 0.25em;
+            }
+          }
+
+          .card-footer {
+            background: #e3e8ec;
+            padding: 0.8em;
+            margin: 1em 0;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1em;
+            .footer-text {
+              font-size: 0.8rem;
+              color: #67778a;
+            }
+            .price-rate {
+              background: #67778a;
+              color: white;
+              font-family: var(--fontH);
+              height: 100%;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.9rem;
+              border-radius: 0.25em;
+              // margin: 1em;
+              gap: 0.2em;
+              .rate {
+                font-size: 0.7rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
