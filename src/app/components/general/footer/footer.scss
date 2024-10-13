@@ -1,0 +1,91 @@
+#footer {
+  background: white;
+  border-radius: 5em 5em 0 0;
+  border-top: 5px solid #242528;
+  border-left: 5px solid #242528;
+  border-right: 5px solid #242528;
+  .footer-stats {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    gap: 1em;
+    .stats {
+      text-align: center;
+      min-width: 200px;
+      h2 {
+        font-size: 4rem;
+        color: #2f4057;
+      }
+      p {
+        font-size: 1.2rem;
+        color: #777373;
+        text-transform: uppercase;
+        font-family: var(--fontH);
+      }
+    }
+  }
+
+  .content {
+    background: url("/background/flowy.png") #242528;
+    padding: 2em;
+    // margin-top: 200px;
+    padding-top: 100px;
+    min-height: 600px;
+    .confine {
+      max-width: min(1110px, 90%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      .info {
+        h3 {
+          color: #45dafb;
+          font-size: 4rem;
+          line-height: 80%;
+          margin-top: 0.25em;
+        }
+        p {
+          color: white;
+          margin: 0.55em 0;
+        }
+        .btn-secondary {
+          background-color: #45dafb;
+          margin: 1em 0;
+          font-size: 1.2rem;
+        }
+      }
+
+      .points {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        margin-top: 4em;
+        gap: 0.25em;
+        li {
+          &:hover {
+            color: #ff9345;
+            rotate: -1deg;
+            transition: all 350ms ease;
+            a {
+              transition: all 350ms ease;
+              color: #ff9345;
+            }
+          }
+          color: #9aa4b0;
+          font-size: 1.2rem;
+          display: flex;
+          align-items: center;
+
+          a {
+            font-size: 1.2rem;
+            color: #9aa4b0;
+          }
+          font-size: 0.9rem;
+        }
+        svg {
+          color: #ff9345;
+          transform: translateY(12%);
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,6 @@
+import { CSSProperties } from "react";
 import "./home.scss";
+import TalentCards from "./components/home/talentCards/TalentCards";
 export default function Home() {
   return (
     <main id="page_home">
@@ -36,6 +38,11 @@ export default function Home() {
       <section className="service">
         <div className="heading">
           <div className="left">
+            <img
+              src="/background/traingle_orange1.png"
+              alt=""
+              className="decor_triangle"
+            />
             <h2 className="common-heading">SERVICE HEADER</h2>
             <p className="common-p">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -109,7 +116,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="service-card">
+          <div
+            className="service-card"
+            style={
+              { "--color": "#FF9345", "--bgColor": "#ffd1af" } as CSSProperties
+            }
+          >
             <div className="price"> $255</div>
             <div className="service-h">
               <h3>Service Title</h3>
@@ -137,6 +149,22 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="talent-current">
+        <div className="talent-current-h">
+          <h2 className="common-heading">Current Talents</h2>
+        </div>
+        <TalentCards />
+        <div className="talent-current-f">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis
+          </p>
+          <a href="#" className="btn btn-primary">
+            View Talents
+          </a>
         </div>
       </section>
     </main>

@@ -5,6 +5,7 @@ import "./globals.scss";
 import { Sniglet } from "next/font/google";
 import { CSSProperties } from "react";
 import Header from "./components/general/header/Header";
+import Footer from "./components/general/footer/Footer";
 
 const ss = localFont({
   src: "./fonts/supersonic.ttf",
@@ -38,6 +39,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

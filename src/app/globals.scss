@@ -74,11 +74,41 @@ button {
   text-shadow: 0px 2px rgba(0, 0, 0, 0.196);
   position: relative;
 }
+html,
+body {
+  max-height: 100%;
+  overflow-x: hidden;
+}
 body {
   background: #fff2d9;
   max-width: 100%;
-  overflow-x: hidden;
-  // min-height: 100vh;
+  // overflow-x: ;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -250px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: #ff934527;
+    z-index: -1000;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -550px;
+    right: -320px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: #ff934527;
+    z-index: -1000;
+  }
+}
+main {
+  overflow: hidden;
+  height: 100%;
 }
 .common-heading {
   font-size: 3.4rem;
