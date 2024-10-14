@@ -1,6 +1,12 @@
+import { fetchData } from "../db/db";
 import "./faq.scss";
 import FaqDropdown from "./faqDropdown/FaqDropdown";
-export default function FaqPage() {
+export default async function FaqPage() {
+  const faq = await fetchData<any[]>(`
+		*[_type == 'faq']{
+		...}
+	`);
+  console.log(faq);
   return (
     <main id="page_faq">
       <section className="faq-title">
@@ -24,9 +30,16 @@ export default function FaqPage() {
         </div>
       </section>
       <section className="faq-list">
-        <FaqDropdown />
-        <FaqDropdown />
-        <FaqDropdown />
+        {faq &&
+          faq.map((data: any, index: number) => {
+            return (
+              <FaqDropdown
+                key={index}
+                answer={data.answer}
+                question={data.question}
+              />
+            );
+          })}
       </section>
     </main>
   );

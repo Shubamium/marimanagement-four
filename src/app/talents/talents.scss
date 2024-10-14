@@ -125,6 +125,12 @@
             position: relative;
             padding: 0.25em;
             border-radius: 0.25em;
+            &.yt {
+              background: #ff437b;
+            }
+            &.t {
+              background: #8256f3;
+            }
             svg {
               width: 100%;
               height: 100%;
