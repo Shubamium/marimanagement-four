@@ -1,0 +1,68 @@
+.faq-dd {
+  padding: 1.5em;
+  background: url("/background/zigzag_neutral.png"), #3a3c43;
+  width: 100%;
+  background-size: 10px;
+  column-rule-color: white;
+  border-radius: 1em;
+  transition: all 250ms ease;
+  cursor: pointer;
+
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.256);
+  &:hover {
+    scale: 1.02;
+  }
+
+  &.closed {
+    .faq-dd-c {
+      max-height: 0px;
+      overflow: hidden;
+      opacity: 0;
+      // padding: 0.55em;
+    }
+  }
+  &.open {
+    .faq-dd-c {
+      margin-bottom: 2em;
+      padding-top: 2em;
+    }
+    .btn-open {
+      rotate: -90deg;
+    }
+    scale: 1.05;
+  }
+  &-c {
+    transition: all 200ms ease;
+    padding-right: 2em;
+    color: white;
+    max-height: 300px;
+    overflow-y: auto;
+    .answer {
+      opacity: 0.8;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.331);
+    }
+  }
+  &-h {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      color: white;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.331);
+      font-size: 1.25rem;
+      font-weight: normal;
+    }
+    .btn-open {
+      background: #ffffff;
+      color: #67778a;
+      width: 35px;
+      height: 35px;
+      border-radius: 0.55em;
+      svg {
+        width: 100%;
+        height: 100%;
+        padding: 0.45em;
+      }
+    }
+  }
+}

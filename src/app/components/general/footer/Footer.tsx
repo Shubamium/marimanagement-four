@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.scss";
-import { FaCircle, FaDotCircle } from "react-icons/fa";
+import { FaCircle } from "react-icons/fa";
 
 export default function Footer() {
   return (

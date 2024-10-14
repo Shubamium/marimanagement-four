@@ -1,0 +1,29 @@
+#page_faq {
+  padding-top: 200px;
+  min-height: 80vh;
+  .faq-title-h {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+      margin: 0.25em;
+    }
+    position: relative;
+    .decor_triangle {
+      top: -50px;
+      left: 30%;
+      position: absolute;
+      z-index: -2;
+      animation: speen 41s infinite linear;
+    }
+  }
+
+  .faq-list {
+    min-height: 80vh;
+    max-width: 1000px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+  }
+}

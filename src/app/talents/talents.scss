@@ -1,0 +1,137 @@
+#page_talent {
+  // min-height: 2000px;
+  padding-top: 200px;
+  .talent-general {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 1em;
+    &-h {
+      padding-right: 2em;
+      position: relative;
+      .decor_triangle {
+        position: absolute;
+
+        top: -30px;
+        left: -50px;
+        z-index: -2;
+        animation: speen 41s infinite linear;
+      }
+    }
+
+    &-c {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1em;
+      .testimonials-card {
+        background: white;
+        border: 4px solid #67778a;
+        border-radius: 1em;
+        padding-bottom: 1em;
+        transition: all 500ms ease;
+        &:hover {
+          scale: 1.1;
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 1em;
+          .pfp {
+            img {
+              width: 100px;
+              height: 100px;
+              background: white;
+              outline: 3px solid #67778a;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+          .name {
+            font-size: 0.9rem;
+            color: #67778a;
+          }
+        }
+        .testimonials {
+          font-size: 0.78rem;
+          color: white;
+          background: #67778a;
+          padding: 1em;
+          min-height: 120px;
+        }
+      }
+    }
+  }
+  .talent-list {
+    max-width: min(1440px, 90%);
+    margin: 200px auto;
+    display: flex;
+    // flex-direction: ;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    .talent-card {
+      width: 340px;
+      height: 140px;
+      --color: #ff9345;
+      border: 5px solid #242528;
+      background: url("/background/zigzag_neutral.png"), var(--color);
+      padding: 0.55em;
+      border-radius: 0.5em;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 1em;
+      transition: all 500ms ease;
+      &:hover {
+        scale: 1.05;
+        rotate: 3deg;
+      }
+      .pfp {
+        height: 100%;
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          background: white;
+          object-fit: cover;
+          border-radius: 1em 0 0 1em;
+          box-shadow: 4px 4px rgba(0, 0, 0, 0.315);
+        }
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h3 {
+          color: #3e444b;
+          letter-spacing: 1px;
+          font-size: 1rem;
+          font-weight: normal;
+        }
+        .contacts {
+          align-self: flex-end;
+          width: max-content;
+          display: flex;
+          align-items: center;
+          gap: 0.25em;
+          .btn.contact {
+            --color: #3e444b;
+            background: var(--color);
+            box-shadow: 0px 3px rgba(0, 0, 0, 0.151);
+            color: white;
+            width: 35px;
+            height: 35px;
+            position: relative;
+            padding: 0.25em;
+            border-radius: 0.25em;
+            svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

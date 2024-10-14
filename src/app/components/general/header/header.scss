@@ -40,7 +40,7 @@
           transition: all 100ms ease-out;
         }
         &:hover,
-        .active {
+        &.active {
           background: #3f8fec;
           color: white;
           svg {

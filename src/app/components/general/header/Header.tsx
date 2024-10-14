@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import {
@@ -7,18 +8,38 @@ import {
   FaQuestionCircle,
 } from "react-icons/fa";
 import "./header.scss";
+import { usePathname } from "next/navigation";
 export default function Header() {
+  const pathname = usePathname();
+  const urlHas = (key: string) => {
+    // const url = new URL(window.location.href).pathname;
+    return pathname.includes(key);
+  };
+  const urlIs = (key: string) => {
+    // const url = new URL(window.location.href).pathname;
+    return pathname === key;
+  };
+
   return (
     <header id="header">
       <nav id="nav">
         <div className="left-nav">
-          <Link href={"/"} className="btn btn-nav">
+          <Link
+            href={"/"}
+            className={`btn btn-nav ${urlIs("/") ? "active" : ""}`}
+          >
             <FaHome /> HOME
           </Link>
-          <Link href={"/"} className="btn btn-nav">
+          <Link
+            href={"/talents"}
+            className={`btn btn-nav ${urlHas("/talents") ? "active" : ""}`}
+          >
             <FaMagic /> TALENTS
           </Link>
-          <Link href={"/"} className="btn btn-nav">
+          <Link
+            href={"/faq"}
+            className={`btn btn-nav ${urlHas("/faq") ? "active" : ""}`}
+          >
             <FaQuestionCircle /> FAQ
           </Link>
         </div>

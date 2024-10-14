@@ -1,4 +1,27 @@
 #footer {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: #ff934527;
+    z-index: -1000;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -250px;
+    right: -320px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: #ff934527;
+    z-index: -1000;
+  }
   background: white;
   border-radius: 5em 5em 0 0;
   border-top: 5px solid #242528;
