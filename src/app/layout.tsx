@@ -6,7 +6,7 @@ import { Sniglet } from "next/font/google";
 import { CSSProperties } from "react";
 import Header from "./components/general/header/Header";
 import Footer from "./components/general/footer/Footer";
-import supersonic from "./fonts/supersonic";
+
 const ss = localFont({
   src: "./fonts/supersonic.ttf",
   variable: "--fontH",
