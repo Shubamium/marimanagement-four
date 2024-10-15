@@ -1,12 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import {
-  FaArrowRight,
-  FaHome,
-  FaMagic,
-  FaQuestionCircle,
-} from "react-icons/fa";
+import { FaHome, FaMagic, FaQuestionCircle } from "react-icons/fa";
 import "./header.scss";
 import { usePathname } from "next/navigation";
 export default function Header() {
@@ -21,42 +16,44 @@ export default function Header() {
   };
 
   return (
-    <header id="header">
-      <nav id="nav">
-        <div className="left-nav">
-          <Link
-            href={"/"}
-            className={`btn btn-nav ${urlIs("/") ? "active" : ""}`}
-          >
-            <FaHome /> HOME
-          </Link>
-          <Link
-            href={"/talents"}
-            className={`btn btn-nav ${urlHas("/talents") ? "active" : ""}`}
-          >
-            <FaMagic /> TALENTS
-          </Link>
-          <Link
-            href={"/faq"}
-            className={`btn btn-nav ${urlHas("/faq") ? "active" : ""}`}
-          >
-            <FaQuestionCircle /> FAQ
-          </Link>
-        </div>
-        <div className="right-nav">
-          <Link href={"/"} className="btn nav-main">
-            CONTACT ME!
-            <img src="/graphic/white_star_l.png" alt="" className="star r" />
-            <img src="/graphic/white_star_l.png" alt="" className="star l" />
-            <img
-              src="/graphic/white_star_l.png"
-              alt=""
-              className="star l smoll"
-            />
-            {/* <img src="/graphic/white_star_l.png" alt="" className="star lb" /> */}
-          </Link>
-        </div>
-      </nav>
-    </header>
+    <div className="header-container">
+      <header id="header">
+        <nav id="nav">
+          <div className="left-nav">
+            <Link
+              href={"/"}
+              className={`btn btn-nav ${urlIs("/") ? "active" : ""}`}
+            >
+              <FaHome /> HOME
+            </Link>
+            <Link
+              href={"/talents"}
+              className={`btn btn-nav ${urlHas("/talents") ? "active" : ""}`}
+            >
+              <FaMagic /> TALENTS
+            </Link>
+            <Link
+              href={"/faq"}
+              className={`btn btn-nav ${urlHas("/faq") ? "active" : ""}`}
+            >
+              <FaQuestionCircle /> FAQ
+            </Link>
+          </div>
+          <div className="right-nav">
+            <Link href={"/"} className="btn nav-main">
+              CONTACT ME!
+              <img src="/graphic/white_star_l.png" alt="" className="star r" />
+              <img src="/graphic/white_star_l.png" alt="" className="star l" />
+              <img
+                src="/graphic/white_star_l.png"
+                alt=""
+                className="star l smoll"
+              />
+              {/* <img src="/graphic/white_star_l.png" alt="" className="star lb" /> */}
+            </Link>
+          </div>
+        </nav>
+      </header>
+    </div>
   );
 }

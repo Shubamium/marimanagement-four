@@ -1,6 +1,5 @@
 #page_home {
-  margin-top: 100px;
-  overflow-x: hidden;
+  padding-top: 100px;
   // min-height: 5000px;
   .s-hero {
     display: flex;
@@ -86,7 +85,9 @@
       margin-top: 3em;
     }
   }
-
+  .service-container {
+    overflow-x: hidden;
+  }
   .service {
     max-width: 1200px;
     margin: 200px auto;
@@ -134,7 +135,7 @@
         top: 17%;
         left: 0%;
         width: 100%;
-        scale: 100 0.7;
+        scale: 2.3 0.7;
         rotate: -8deg;
         height: 100%;
         background: #242528;

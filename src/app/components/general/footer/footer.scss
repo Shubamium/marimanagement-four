@@ -1,5 +1,10 @@
-#footer {
+.footer-decors {
   position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 400px;
+  margin-top: -250px;
+  margin-bottom: -80px;
   &::before {
     content: "";
     position: absolute;
@@ -10,8 +15,10 @@
     border-radius: 50%;
     background: #ff934527;
     z-index: -1000;
+    transform: translateY(35%);
   }
   &::after {
+    transform: translateY(35%);
     content: "";
     position: absolute;
     top: -250px;
@@ -22,6 +29,11 @@
     background: #ff934527;
     z-index: -1000;
   }
+}
+#footer {
+  position: relative;
+  overflow: hidden;
+
   background: white;
   border-radius: 5em 5em 0 0;
   border-top: 5px solid #242528;

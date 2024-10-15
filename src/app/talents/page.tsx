@@ -84,48 +84,6 @@ export default async function TalentsPage({}) {
                 </div>
               );
             })}
-          {/* <div className="testimonials-card">
-            <div className="info">
-              <div className="pfp">
-                <img
-                  // src="https://img.freepik.com/free-photo/white-cloud-blue-sky-sea_74190-4488.jpg"
-                  src=""
-                  alt=""
-                />
-              </div>
-              <a href="#" className="name">
-                @PERSON_NAME
-              </a>
-            </div>
-            <div className="testimonials">
-              <p>
-                {' " '} Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim
-                {' " '}
-              </p>
-            </div>
-          </div>
-          <div className="testimonials-card">
-            <div className="info">
-              <div className="pfp">
-                <img
-                  src="https://img.freepik.com/free-photo/white-cloud-blue-sky-sea_74190-4488.jpg"
-                  alt=""
-                />
-              </div>
-              <a href="#" className="name">
-                @PERSON_NAME
-              </a>
-            </div>
-            <div className="testimonials">
-              <p>
-                {' " '} Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut e{' " '}
-              </p>
-            </div>
-          </div> */}
         </div>
       </section>
 

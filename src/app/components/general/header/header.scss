@@ -1,11 +1,42 @@
+.header-container {
+  overflow-x: hidden;
+  position: relative;
+  height: 400px;
+  margin-bottom: -400px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -250px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: #ff934527;
+    z-index: -1000;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -550px;
+    right: -320px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: #ff934527;
+    z-index: -1000;
+  }
+}
 #header {
   position: fixed;
   top: 0%;
   left: 0%;
   // background: red;
   z-index: 1000;
-  width: 100%;
-  margin: 1em;
+  width: 100vw;
+  // margin: 1em;
+  padding: 1em;
+  max-width: 100%;
+  overflow-x: hidden;
 
   #nav {
     width: min(90%, 1800px);

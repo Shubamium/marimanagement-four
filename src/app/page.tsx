@@ -51,71 +51,74 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="service">
-        <div className="heading">
-          <div className="left">
-            <img
-              src="/background/traingle_orange1.png"
-              alt=""
-              className="decor_triangle"
-            />
-            <h2 className="common-heading">SERVICE HEADER</h2>
-            <p className="common-p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis
-            </p>
-          </div>
+      <div className="service-container">
+        <section className="service">
+          <div className="heading">
+            <div className="left">
+              <img
+                src="/background/traingle_orange1.png"
+                alt=""
+                className="decor_triangle"
+              />
+              <h2 className="common-heading">SERVICE HEADER</h2>
+              <p className="common-p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis
+              </p>
+            </div>
 
-          <div className="right">
-            <button className="btn btn-secondary">Some button</button>
+            <div className="right">
+              <button className="btn btn-secondary">Some button</button>
+            </div>
           </div>
-        </div>
-        <div className="service-list">
-          {services &&
-            services.map((s: any, i: number) => {
-              return (
-                <div
-                  className="service-card"
-                  key={"service-card-" + s._id}
-                  style={
-                    { "--color": s.panel_color || "#67778A" } as CSSProperties
-                  }
-                >
-                  {s.main_price && <div className="price"> {s.main_price}</div>}
-                  <div className="service-h">
-                    <h3>{s.name}</h3>
-                    {s.subtitle && <p className="subs">{s.subtitle}</p>}
-                    {s.description && <p className="desc">{s.description}</p>}
-                    <ul className="bp">
-                      {s.points &&
-                        s.points.map((point: string, i: number) => {
-                          return (
-                            <li
-                              className="bp-item"
-                              key={s._id + "service-point" + i}
-                            >
-                              Bullet Points here
-                            </li>
-                          );
-                        })}
-                    </ul>
-                    {s.footer && (
-                      <div className="card-footer">
-                        <p className="footer-text">{s.footer.description}</p>
-                        <div className="pricing">
-                          <div className="price-rate">
-                            {s.footer.price}
-                            <span className="rate">{s.footer.rate}</span>
+          <div className="service-list">
+            {services &&
+              services.map((s: any, i: number) => {
+                return (
+                  <div
+                    className="service-card"
+                    key={"service-card-" + s._id}
+                    style={
+                      { "--color": s.panel_color || "#67778A" } as CSSProperties
+                    }
+                  >
+                    {s.main_price && (
+                      <div className="price"> {s.main_price}</div>
+                    )}
+                    <div className="service-h">
+                      <h3>{s.name}</h3>
+                      {s.subtitle && <p className="subs">{s.subtitle}</p>}
+                      {s.description && <p className="desc">{s.description}</p>}
+                      <ul className="bp">
+                        {s.points &&
+                          s.points.map((point: string, i: number) => {
+                            return (
+                              <li
+                                className="bp-item"
+                                key={s._id + "service-point" + i}
+                              >
+                                Bullet Points here
+                              </li>
+                            );
+                          })}
+                      </ul>
+                      {s.footer && (
+                        <div className="card-footer">
+                          <p className="footer-text">{s.footer.description}</p>
+                          <div className="pricing">
+                            <div className="price-rate">
+                              {s.footer.price}
+                              <span className="rate">{s.footer.rate}</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          {/* <div className="service-card">
+                );
+              })}
+            {/* <div className="service-card">
             <div className="price"> $255</div>
             <div className="service-h">
               <h3>Service Title</h3>
@@ -178,8 +181,9 @@ export default async function Home() {
               </div>
             </div>
           </div> */}
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
       <section className="talent-current">
         <div className="talent-current-h">
           <h2 className="common-heading">Current Talents</h2>
