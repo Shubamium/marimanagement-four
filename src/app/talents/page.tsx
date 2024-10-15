@@ -12,6 +12,7 @@ export default async function TalentsPage({}) {
 		*[_type == 'talents']{
 		...}
 	`);
+
   const sbtn = (type: "x" | "twitch" | "youtube", url: string) => {
     const selection = {
       youtube: (
@@ -33,12 +34,17 @@ export default async function TalentsPage({}) {
 
     return selection[type];
   };
+
   console.log(talentList[0]);
   return (
     <main id="page_talent">
       <section className="talent-general">
         <div className="talent-general-h">
-          <h2 className="common-heading">TALENTS</h2>
+          <h2 className="common-heading">
+            TALENTS
+            <img src="/graphic/star1.png" alt="" className="star l" />
+            <img src="/graphic/star1.png" alt="" className="star r" />
+          </h2>
           <img
             src="/background/traingle_orange1.png"
             alt=""

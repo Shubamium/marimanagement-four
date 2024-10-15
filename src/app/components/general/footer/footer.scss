@@ -32,9 +32,56 @@
     justify-content: center;
     padding: 1em;
     gap: 1em;
+    padding-bottom: 3em;
     .stats {
       text-align: center;
       min-width: 200px;
+      position: relative;
+      .star {
+        width: 30px;
+        position: absolute;
+        height: 30px;
+      }
+      &:nth-child(1) {
+        .star {
+          &.l {
+            left: -10%;
+            top: 30%;
+          }
+          &.r {
+            top: 40%;
+            left: 0%;
+            scale: 0.5;
+          }
+        }
+      }
+      &:nth-child(2) {
+        .star {
+          &.l {
+            right: 10%;
+            top: 0%;
+          }
+          &.r {
+            top: 40%;
+            left: 0%;
+            scale: 0.5;
+          }
+        }
+      }
+      &:nth-child(3) {
+        .star {
+          &.l {
+            right: 30%;
+            bottom: 30%;
+            scale: 0.5;
+          }
+          &.r {
+            top: 10%;
+            left: 10%;
+            scale: 0.8;
+          }
+        }
+      }
       h2 {
         font-size: 4rem;
         color: #2f4057;
@@ -60,6 +107,9 @@
       display: grid;
       grid-template-columns: 1.1fr 1fr;
       .info {
+        .btn-secondary {
+          background: #45dafb;
+        }
         h3 {
           color: #45dafb;
           font-size: 4rem;

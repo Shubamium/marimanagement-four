@@ -58,10 +58,53 @@
         display: flex;
         align-items: center;
         gap: 0.5em;
-        padding-right: 1.5em;
+        // padding-right: 1.5em;
+        padding-inline: 1.5em;
         border-radius: 0.25em;
         color: white;
+        text-shadow: 0px 3px rgba(0, 0, 0, 0.257);
+        position: relative;
+        &:hover {
+          &:active {
+            .star {
+              opacity: 0;
+            }
+          }
+          .star {
+            opacity: 1;
+            &.r {
+              transform: translate(50%, -50%);
+            }
+            &.l {
+              transform: translate(-50%, 50%);
+            }
+            &.smoll {
+              transform: translate(-50%, 10%);
+            }
+          }
+        }
+        .star {
+          position: absolute;
+          transition: all 350ms ease;
+          width: 20px;
+          height: 20px;
+          opacity: 0.2;
+          filter: drop-shadow(0px 0px 2px #439bff84);
 
+          top: -20%;
+          right: 0%;
+          &.l {
+            right: initial;
+            left: 10%;
+            top: 70%;
+          }
+          &.smoll {
+            scale: 0.8;
+            left: -10%;
+            top: 30%;
+            // top: -20%;
+          }
+        }
         .active {
           background: #3f8fec;
           color: white;

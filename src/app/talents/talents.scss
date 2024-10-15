@@ -18,6 +18,17 @@
         z-index: -2;
         animation: speen 41s infinite linear;
       }
+      .star {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+
+        &.l {
+          left: 10%;
+          bottom: -10%;
+          scale: 0.9;
+        }
+      }
     }
 
     &-c {
@@ -26,7 +37,7 @@
       gap: 1em;
       .testimonials-card {
         background: white;
-        border: 4px solid #67778a;
+        border: 6px solid #67778a;
         border-radius: 1em;
         padding-bottom: 1em;
         transition: all 500ms ease;

@@ -1,22 +1,35 @@
 import React from "react";
 import "./footer.scss";
-import { FaCircle } from "react-icons/fa";
+import { FaCircle, FaCode, FaCopyright } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
     <footer id="footer">
       <div className="footer-stats">
         <div className="stats">
-          <h2>000+</h2>
+          <h2>
+            000+
+            <img src="/graphic/star1.png" alt="" className="star l" />
+            <img src="/graphic/star1.png" alt="" className="star r" />
+          </h2>
+
           <p>Vtuber Clients</p>
         </div>
         <div className="stats">
-          <h2>000+</h2>
+          <h2>
+            000+
+            <img src="/graphic/star1.png" alt="" className="star l" />
+            <img src="/graphic/star1.png" alt="" className="star r" />
+          </h2>
           <p>Vtuber Clients</p>
         </div>
 
         <div className="stats">
-          <h2>000+</h2>
+          <h2>
+            000+ <img src="/graphic/star1.png" alt="" className="star l" />
+            <img src="/graphic/star1.png" alt="" className="star r" />
+          </h2>
           <p>Vtuber Clients</p>
         </div>
       </div>
@@ -34,26 +47,26 @@ export default function Footer() {
             <ul className="points">
               <li>
                 {" "}
-                <a href="mailto:email">
-                  <FaCircle /> email.mail@domain.com
+                <a href="mailto:sheepishmage@gmail.com">
+                  <FaCircle /> sheepishmage@gmail.com
                 </a>
               </li>
               <li>
                 {" "}
-                <a href="mailto:email">
-                  <FaCircle /> @twitter_handle
+                <a href="https://x.com/SheepishMari" target="_blank">
+                  <FaXTwitter /> @SheepishMari
                 </a>
               </li>
               <li>
                 {" "}
-                <a href="mailto:email">
-                  <FaCircle /> @Marimanagement 2024
+                <a href="#">
+                  <FaCopyright /> Marimanagement 2024
                 </a>
               </li>
               <li>
                 {" "}
-                <a href="mailto:email">
-                  <FaCircle /> Site Design By Shubamium
+                <a href="https://x.com/Shubamium2" target="_blank">
+                  <FaCode /> Site Design By Shubamium
                 </a>
               </li>
             </ul>

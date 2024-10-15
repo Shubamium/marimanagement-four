@@ -18,6 +18,11 @@ export default async function Home() {
       <section className="s-hero">
         <div className="hero-title">
           <h1>Write The Tagline HERE!</h1>
+          <div className="stars">
+            <img src="/graphic/star1.png" alt="" className="star r" />
+            <img src="/graphic/star1.png" alt="" className="star l" />
+            <img src="/graphic/star1.png" alt="" className="star c" />
+          </div>
           <h2 className="common-heading">Call To Action Text</h2>
           <img
             src="/graphic/triangle_grey1.png"

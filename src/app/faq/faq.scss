@@ -8,6 +8,19 @@
     h2 {
       margin: 0.25em;
     }
+    .star {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      &.l {
+        left: 0%;
+        scale: 0.7;
+      }
+      &.c {
+        left: 20%;
+        bottom: -10%;
+      }
+    }
     position: relative;
     .decor_triangle {
       top: -50px;

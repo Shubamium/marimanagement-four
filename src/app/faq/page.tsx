@@ -13,6 +13,9 @@ export default async function FaqPage() {
         <div className="faq-title-h">
           <h2 className="common-heading">
             Frequently ASked Question
+            <img src="/graphic/star1.png" alt="" className="star l" />
+            <img src="/graphic/star1.png" alt="" className="star c" />
+            <img src="/graphic/star1.png" alt="" className="star r" />
             <img
               src="/background/traingle_orange1.png"
               alt=""
@@ -40,6 +43,10 @@ export default async function FaqPage() {
               />
             );
           })}
+        <FaqDropdown answer=" " question="" />
+        <FaqDropdown answer=" " question="" />
+        <FaqDropdown answer=" " question="" />
+        <FaqDropdown answer=" " question="" />
       </section>
     </main>
   );

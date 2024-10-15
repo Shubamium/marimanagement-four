@@ -45,7 +45,15 @@ export default function Header() {
         </div>
         <div className="right-nav">
           <Link href={"/"} className="btn nav-main">
-            CONTACT ME! <FaArrowRight />
+            CONTACT ME!
+            <img src="/graphic/white_star_l.png" alt="" className="star r" />
+            <img src="/graphic/white_star_l.png" alt="" className="star l" />
+            <img
+              src="/graphic/white_star_l.png"
+              alt=""
+              className="star l smoll"
+            />
+            {/* <img src="/graphic/white_star_l.png" alt="" className="star lb" /> */}
           </Link>
         </div>
       </nav>

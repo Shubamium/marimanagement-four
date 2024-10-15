@@ -20,6 +20,12 @@
       opacity: 0;
       // padding: 0.55em;
     }
+    .faq-dd-h {
+      .decor-mark {
+        top: -40px;
+        opacity: 0;
+      }
+    }
   }
   &.open {
     .faq-dd-c {
@@ -27,7 +33,13 @@
       padding-top: 2em;
     }
     .btn-open {
-      rotate: -90deg;
+      rotate: 90deg;
+    }
+    .faq-dd-h {
+      .decor-mark {
+        top: -15px;
+        opacity: 1;
+      }
     }
     scale: 1.05;
   }
@@ -45,6 +57,14 @@
   &-h {
     display: flex;
     justify-content: space-between;
+    .decor-mark {
+      position: absolute;
+      top: -15px;
+      scale: 0.9;
+      height: 30px;
+      right: 20%;
+      transition: all 200ms ease;
+    }
     h3 {
       color: white;
       letter-spacing: 1px;
