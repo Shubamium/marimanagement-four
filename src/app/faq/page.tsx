@@ -43,10 +43,6 @@ export default async function FaqPage() {
               />
             );
           })}
-        <FaqDropdown answer=" " question="" />
-        <FaqDropdown answer=" " question="" />
-        <FaqDropdown answer=" " question="" />
-        <FaqDropdown answer=" " question="" />
       </section>
     </main>
   );
