@@ -105,6 +105,37 @@ main {
 .common-p {
   color: #2f4156;
   font-size: 1rem;
+  // text-transform: 1;
+  position: relative;
+  z-index: 100;
+}
+
+@media screen and (max-width: 1024px) {
+  .common-heading {
+    font-size: 3rem;
+  }
+  .common-p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .btn-primary,
+  .btn-secondary {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .common-heading {
+    font-size: 2.3rem;
+  }
 }
 h1,
 h2,

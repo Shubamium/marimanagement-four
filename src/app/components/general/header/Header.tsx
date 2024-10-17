@@ -24,19 +24,19 @@ export default function Header() {
               href={"/"}
               className={`btn btn-nav ${urlIs("/") ? "active" : ""}`}
             >
-              <FaHome /> HOME
+              <FaHome /> <span>HOME</span>
             </Link>
             <Link
               href={"/talents"}
               className={`btn btn-nav ${urlHas("/talents") ? "active" : ""}`}
             >
-              <FaMagic /> TALENTS
+              <FaMagic /> <span>TALENTS</span>
             </Link>
             <Link
               href={"/faq"}
               className={`btn btn-nav ${urlHas("/faq") ? "active" : ""}`}
             >
-              <FaQuestionCircle /> FAQ
+              <FaQuestionCircle /> <span>FAQ</span>
             </Link>
           </div>
           <div className="right-nav">

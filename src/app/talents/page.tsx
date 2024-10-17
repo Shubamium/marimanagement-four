@@ -51,11 +51,27 @@ export default async function TalentsPage({}) {
             className="decor_triangle"
           />
           <p className="common-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillu
+            {`
+							This page highlights a selection of talented individuals I've had
+            the pleasure of working with. While this list represents some of my
+            most notable collaborations, it's important to note that my
+            portfolio extends beyond these listed and may be missing for various
+            reasons. 
+						\n
+
+						\n
+						
+						`}
+          </p>
+          <br />
+          <p className="common-p">
+            {`
+							As a token of gratitude for their trust and partnership, all clients
+            listed here can receive a 25% discount on their next service.
+            Additionally, they're invited to request more specialized services,
+            tailored to their unique needs. I want to give those I work with
+            good perks and this could be for you too!
+						`}
           </p>
         </div>
         <div className="talent-general-c">

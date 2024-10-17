@@ -10,57 +10,71 @@ type Props = {
 };
 export default function TalentCards({ tList }: Props) {
   const [page, setPage] = useState(0);
+  const [isChangingPage, setIsChangingPage] = useState(false);
 
   const pageData = [];
   const toChop = [...tList];
   while (toChop.length > 0) {
-    pageData.push(toChop.splice(0, 3));
+    pageData.push(toChop.splice(0, 4));
     console.log("chopping");
   }
 
+  const at = 1500;
   const next = () => {
-    setPage((page) => page + 1);
+    if (toChop.length <= 1 || isChangingPage) return;
+    setIsChangingPage(true);
+    setTimeout(() => {
+      setPage((page) => page + 1);
+      setIsChangingPage(false);
+    }, at);
   };
 
   const prev = () => {
-    setPage((page) => page - 1);
+    if (toChop.length <= 1 || isChangingPage) return;
+
+    setIsChangingPage(true);
+    setTimeout(() => {
+      setPage((page) => page - 1);
+      setIsChangingPage(false);
+    }, at);
   };
-  const index = Math.abs(page % pageData.length);
+  const index = Math.max(Math.abs(page % pageData.length), 0);
   console.log(pageData, index, pageData.length, page % (pageData.length + 1));
 
   return (
-    <div className="talent-current-c">
-      <button className="btn btn-control btn-secondary" onClick={prev}>
-        <FaArrowLeft />
-      </button>
-      <div className="list">
-        {pageData.length !== 0 &&
-          pageData[index] &&
-          pageData[index].map((data: any, i: number) => {
-            return (
-              <a
-                href={data.link}
-                className="talent-card btn"
-                target="_blank"
-                key={"talent" + i}
-              >
-                <div className="info">
-                  <div className="pfp">
-                    <img
-                      src={data.pfp && urlFor(data.pfp).url()}
-                      alt="talent-img"
-                    />
+    <>
+      <div className="talent-current-c">
+        <button className="btn btn-control btn-secondary" onClick={prev}>
+          <FaArrowLeft />
+        </button>
+        <div className={`list ${isChangingPage ? "changing" : "notChanging"}`}>
+          {pageData.length !== 0 &&
+            pageData[index] &&
+            pageData[index].map((data: any, i: number) => {
+              return (
+                <a
+                  href={data.link}
+                  className="talent-card btn"
+                  target="_blank"
+                  key={"talent" + data._id}
+                >
+                  <div className="info">
+                    <div className="pfp">
+                      <img
+                        src={data.pfp && urlFor(data.pfp).url()}
+                        alt="talent-img"
+                      />
+                    </div>
+                    <p>{data.name}</p>
                   </div>
-                  <p>{data.name}</p>
-                </div>
-                <div className="quote">
-                  <p>&rdquo;{data.testimonial}&rdquo;</p>
-                </div>
-              </a>
-            );
-          })}
+                  <div className="quote">
+                    <p>&rdquo;{data.testimonial}&rdquo;</p>
+                  </div>
+                </a>
+              );
+            })}
 
-        {/* <a href="#" className="talent-card btn">
+          {/* <a href="#" className="talent-card btn">
           <div className="info">
             <div className="pfp">
               <img src="/" alt="" />
@@ -75,10 +89,19 @@ export default function TalentCards({ tList }: Props) {
             </p>
           </div>
         </a> */}
+        </div>
+        <button className="btn btn-control btn-secondary" onClick={next}>
+          <FaArrowRight />
+        </button>
       </div>
-      <button className="btn btn-control btn-secondary" onClick={next}>
-        <FaArrowRight />
-      </button>
-    </div>
+      <div className="alternate-control">
+        <button className="btn btn-control btn-secondary" onClick={prev}>
+          <FaArrowLeft />
+        </button>
+        <button className="btn btn-control btn-secondary" onClick={next}>
+          <FaArrowRight />
+        </button>
+      </div>
+    </>
   );
 }
