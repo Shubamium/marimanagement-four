@@ -71,6 +71,11 @@
       text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.331);
       font-size: 1.25rem;
       font-weight: normal;
+      span {
+        margin-right: 0.4em;
+        // padding-right: 1em;
+        opacity: 0.5;
+      }
     }
     .btn-open {
       background: #ffffff;
@@ -83,6 +88,35 @@
         height: 100%;
         padding: 0.45em;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .faq-dd {
+    .faq-dd-h h3 {
+      font-size: 1rem;
+    }
+    .faq-dd-h .btn-open {
+      width: 30px;
+      height: 20px;
+    }
+    .faq-dd-c {
+      .answer {
+        font-size: 1rem;
+        padding-right: 0;
+      }
+      padding-right: 0.25em;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #page_faq .faq-list {
+    max-width: 100%;
+
+    .faq-dd {
+      border-radius: 0;
     }
   }
 }

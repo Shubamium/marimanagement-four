@@ -29,7 +29,10 @@ export default function FaqDropdown({ question, answer }: Props) {
           <path d="M91.5 0H123V40H88L91.5 0Z" fill="#FF9345" />
         </svg>
 
-        <h3>Q:{question}</h3>
+        <h3>
+          <span>Q:</span>
+          {question}
+        </h3>
         <button className="btn btn-open">
           <TbTriangleInvertedFilled />
         </button>
