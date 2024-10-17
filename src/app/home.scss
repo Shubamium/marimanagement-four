@@ -279,6 +279,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1em;
+        margin: 1em;
+        align-items: center;
+        min-height: 230px;
         .talent-card {
           background: url("/background/zigzag_5.png"), #fafafc;
           background-blend-mode: multiply;

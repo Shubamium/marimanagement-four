@@ -11,7 +11,7 @@ export default async function Home() {
 		*[_type == 'current_talents']{...}
 	`);
 
-  console.log(testimonials);
+  console.log("ayy");
 
   return (
     <main id="page_home">
@@ -96,9 +96,9 @@ export default async function Home() {
                             return (
                               <li
                                 className="bp-item"
-                                key={s._id + "service-point" + i}
+                                key={s._key + "service-point" + i}
                               >
-                                Bullet Points here
+                                {point}
                               </li>
                             );
                           })}

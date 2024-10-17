@@ -25,7 +25,9 @@ export default function TalentCards({ tList }: Props) {
   const prev = () => {
     setPage((page) => page - 1);
   };
-  console.log(toChop);
+  const index = Math.abs(page % pageData.length);
+  console.log(pageData, index, pageData.length, page % (pageData.length + 1));
+
   return (
     <div className="talent-current-c">
       <button className="btn btn-control btn-secondary" onClick={prev}>
@@ -33,8 +35,8 @@ export default function TalentCards({ tList }: Props) {
       </button>
       <div className="list">
         {pageData.length !== 0 &&
-          pageData[page % pageData.length] &&
-          pageData[page % pageData.length].map((data: any, i: number) => {
+          pageData[index] &&
+          pageData[index].map((data: any, i: number) => {
             return (
               <a
                 href={data.link}
@@ -44,12 +46,15 @@ export default function TalentCards({ tList }: Props) {
               >
                 <div className="info">
                   <div className="pfp">
-                    <img src={urlFor(data.pfp).url()} alt="talent-img" />
+                    <img
+                      src={data.pfp && urlFor(data.pfp).url()}
+                      alt="talent-img"
+                    />
                   </div>
                   <p>{data.name}</p>
                 </div>
                 <div className="quote">
-                  <p>"{data.testimonial}"</p>
+                  <p>&rdquo;{data.testimonial}&rdquo;</p>
                 </div>
               </a>
             );
