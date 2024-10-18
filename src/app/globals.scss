@@ -104,10 +104,11 @@ main {
 }
 .common-p {
   color: #2f4156;
-  font-size: 1rem;
+  font-size: 1.1rem;
   // text-transform: 1;
   position: relative;
   z-index: 100;
+  line-height: 1.4;
 }
 
 @media screen and (max-width: 1024px) {
