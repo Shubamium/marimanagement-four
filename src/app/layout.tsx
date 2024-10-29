@@ -13,8 +13,9 @@ const ss = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Mawissuh Four",
-  description: "Mawissuh Four",
+  title: "Mawissuh",
+  description:
+    "Take your VTuber career to the next level with my comprehensive management services, tailored to your needs",
 };
 
 const sniglet = Sniglet({
