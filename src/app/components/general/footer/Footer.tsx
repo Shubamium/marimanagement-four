@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="footer-stats">
           <div className="stats">
             <h2>
-              000+
+              25+
               <img src="/graphic/star1.png" alt="" className="star l" />
               <img src="/graphic/star1.png" alt="" className="star r" />
             </h2>
@@ -21,37 +21,45 @@ export default function Footer() {
           </div>
           <div className="stats">
             <h2>
-              000+
+              2+
               <img src="/graphic/star1.png" alt="" className="star l" />
               <img src="/graphic/star1.png" alt="" className="star r" />
             </h2>
-            <p>Vtuber Clients</p>
+            <p>YEARS OF EXPERIENCE</p>
           </div>
 
-          <div className="stats">
+          {/* <div className="stats">
             <h2>
               000+ <img src="/graphic/star1.png" alt="" className="star l" />
               <img src="/graphic/star1.png" alt="" className="star r" />
             </h2>
             <p>Vtuber Clients</p>
-          </div>
+          </div> */}
         </div>
         <div className="content">
           <div className="confine">
             <div className="info">
-              <h3> MORE TAGLINE!</h3>
+              <h3> VTuber Manager Services✦ </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis
+                This service is a luxury and NOT a requirement to be a creator!
+                If you are brand new, consider doing some self research! This is
+                an optional clarity of mind as I will assist you in your content
+                creation. I provide you support and ensure all your needs and
+                goals are met!
               </p>
 
-              <button className="btn btn-secondary">Contact Me!</button>
+              <a
+                href="https://x.com/messages/1379171069043564552-1608144670852534272?recipient_id=1379171069043564552&text=Hi%2C%20I%27m%20interested%20in%20hiring%20you%20as%20my%20manager.%20Could%20we%20discuss%20further%20details%3F%20%F0%9F%AA%84%F0%9F%8C%9F%20%F0%9F%93%8B"
+                target="_blank"
+                className="btn btn-secondary"
+              >
+                Contact Me!
+              </a>
               <ul className="points">
                 <li>
                   {" "}
-                  <a href="mailto:sheepishmage@gmail.com">
-                    <FaCircle /> sheepishmage@gmail.com
+                  <a href="mailto:mawissuh@marimanagement.com">
+                    <FaCircle /> mawissuh@marimanagement.com
                   </a>
                 </li>
                 <li>

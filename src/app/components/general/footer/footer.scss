@@ -117,20 +117,21 @@
       max-width: min(1110px, 90%);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.1fr 1fr;
+      grid-template-columns: 1.1fr 0.5fr;
       .info {
         .btn-secondary {
           background: #45dafb;
         }
         h3 {
           color: #45dafb;
-          font-size: 4rem;
-          line-height: 80%;
+          font-size: 3rem;
+          line-height: 100%;
           margin-top: 0.25em;
         }
         p {
           color: white;
           margin: 0.55em 0;
+          margin-bottom: 1em;
         }
         .btn-secondary {
           background-color: #45dafb;

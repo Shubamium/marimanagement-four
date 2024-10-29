@@ -52,26 +52,34 @@ export default async function TalentsPage({}) {
           />
           <p className="common-p">
             {`
-							This page highlights a selection of talented individuals I've had
-            the pleasure of working with. While this list represents some of my
-            most notable collaborations, it's important to note that my
-            portfolio extends beyond these listed and may be missing for various
-            reasons. 
+					 
 						\n
 
 						\n
 						
 						`}
+            This page highlights a selection of talented individuals I&apos;ve
+            had the pleasure of working with. While this list represents some of
+            my most notable collaborations, it&apos;s important to note that{" "}
+            <strong>my portfolio extends beyond these listed</strong> and may be
+            missing for various reasons.
           </p>
           <br />
           <p className="common-p">
             {`
-							As a token of gratitude for their trust and partnership, all clients
-            listed here can receive a 25% discount on their next service.
-            Additionally, they're invited to request more specialized services,
-            tailored to their unique needs. I want to give those I work with
-            good perks and this could be for you too!
+							
 						`}
+            As a token of gratitude for their trust and partnership, all clients
+            listed here can <strong>receive a 20% discount</strong> on their
+            next service, and situational bonuses.. Additionally, they&apos;re
+            invited to request more specialized services, tailored to their
+            unique needs.
+            <br />
+            <br />
+            <span className="hl">
+              I want to give those I work with good perks and this could be for
+              you too!
+            </span>
           </p>
         </div>
         <div className="talent-general-c">

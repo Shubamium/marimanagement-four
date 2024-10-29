@@ -18,6 +18,16 @@
         z-index: -2;
         animation: speen 41s infinite linear;
       }
+      .common-p {
+        font-size: 1rem;
+        .hl {
+          background: #67778a98;
+          display: block;
+          padding: 0.55em;
+          color: white;
+          border-radius: 0.25em;
+        }
+      }
       .star {
         width: 30px;
         height: 30px;
@@ -32,18 +42,23 @@
     }
 
     &-c {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      flex-direction: column;
+      flex-basis: auto;
       gap: 1em;
       .testimonials-card {
         background: white;
         border: 6px solid #67778a;
         border-radius: 1em;
-        padding-bottom: 1em;
+        // padding-bottom: 1em;
         transition: all 500ms ease;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.349);
+        display: flex;
+        // flex-direction: column;
         &:hover {
-          scale: 1.1;
+          // scale: 1.1;
         }
         .info {
           display: flex;
@@ -69,6 +84,7 @@
           font-size: 0.78rem;
           color: white;
           background: #67778a;
+          line-height: 1.4;
           padding: 1em;
           min-height: 120px;
         }

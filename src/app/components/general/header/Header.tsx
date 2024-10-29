@@ -40,7 +40,13 @@ export default function Header() {
             </Link>
           </div>
           <div className="right-nav">
-            <Link href={"/"} className="btn nav-main">
+            <Link
+              target="_blank"
+              href={
+                "https://x.com/messages/1379171069043564552-1608144670852534272?recipient_id=1379171069043564552&text=Hi%2C%20I%27m%20interested%20in%20hiring%20you%20as%20my%20manager.%20Could%20we%20discuss%20further%20details%3F%20%F0%9F%AA%84%F0%9F%8C%9F%20%F0%9F%93%8B"
+              }
+              className="btn nav-main"
+            >
               CONTACT ME!
               <img src="/graphic/white_star_l.png" alt="" className="star r" />
               <img src="/graphic/white_star_l.png" alt="" className="star l" />

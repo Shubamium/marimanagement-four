@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 @keyframes speen {
   from {
@@ -10,6 +11,11 @@
   to {
     rotate: 360deg;
   }
+}
+strong {
+  font-weight: 500;
+  // filter: grayscale(100%);
+  filter: invert(60%);
 }
 button {
   padding: 0;
