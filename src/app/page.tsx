@@ -11,8 +11,6 @@ export default async function Home() {
 		*[_type == 'current_talents']{...}
 	`);
 
-  console.log("ayy");
-
   return (
     <main id="page_home">
       <section className="s-hero">

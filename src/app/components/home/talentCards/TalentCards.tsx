@@ -1,7 +1,6 @@
 "use client";
 import { urlFor } from "@/app/db/db";
-import React, { FormEvent, useRef, useState } from "react";
-import emailjs, { sendForm } from "@emailjs/browser";
+import React, { useRef, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const mockData = ["a", "b", "c", "d", "f", "e", "g"];
