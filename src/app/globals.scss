@@ -12,10 +12,13 @@
     rotate: 360deg;
   }
 }
+.star {
+  display: none;
+}
 strong {
   font-weight: 500;
   // filter: grayscale(100%);
-  filter: invert(60%);
+  // filter: invert(60%);
 }
 button {
   padding: 0;
