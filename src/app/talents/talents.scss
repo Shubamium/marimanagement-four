@@ -32,7 +32,7 @@
         width: 30px;
         height: 30px;
         position: absolute;
-
+        z-index: -2;
         &.l {
           left: 10%;
           bottom: -10%;
