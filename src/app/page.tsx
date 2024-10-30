@@ -2,7 +2,6 @@ import "./home.scss";
 import TalentCards from "./components/home/talentCards/TalentCards";
 import { fetchData } from "./db/db";
 import { CSSProperties } from "react";
-import { FaReadme } from "react-icons/fa";
 
 export default async function Home() {
   const services = await fetchData<any[]>(`

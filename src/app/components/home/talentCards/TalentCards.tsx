@@ -1,7 +1,7 @@
 "use client";
 import { urlFor } from "@/app/db/db";
-import React, { useState } from "react";
-
+import React, { FormEvent, useRef, useState } from "react";
+import emailjs, { sendForm } from "@emailjs/browser";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const mockData = ["a", "b", "c", "d", "f", "e", "g"];
@@ -11,7 +11,7 @@ type Props = {
 export default function TalentCards({ tList }: Props) {
   const [page, setPage] = useState(0);
   const [isChangingPage, setIsChangingPage] = useState(false);
-
+  const formRef = useRef<HTMLFormElement | null>(null);
   const pageData = [];
   const toChop = [...tList];
   while (toChop.length > 0) {
@@ -41,9 +41,35 @@ export default function TalentCards({ tList }: Props) {
   const index = Math.max(Math.abs(page % pageData.length), 0);
   console.log(pageData, index, pageData.length, page % (pageData.length + 1));
 
+  const sendMail = async (e: FormEvent) => {
+    e.preventDefault();
+    emailjs.init({
+      publicKey: "uuuAsMBxCUbtbeVKg",
+      limitRate: {
+        // Set the limit rate for the application
+        id: "app",
+        // Allow 1 request per 10s
+        throttle: 10000,
+      },
+    });
+    const output = await emailjs.sendForm(
+      "service_8axo6mb",
+      "template_50e18yq",
+      formRef.current || "#formtest"
+    );
+    localStorage.setItem("mailtest", JSON.stringify(output));
+  };
   return (
     <>
       <div className="talent-current-c">
+        <form onSubmit={sendMail} ref={formRef} id="formtest">
+          <input type="text" name="to_name" placeholder="yay" id="nameid" />
+          <input type="text" name="from_name" />
+          <input type="text" name="message" />
+          <button className="btn btn-control" type="submit">
+            Send Email
+          </button>
+        </form>
         <button className="btn btn-control btn-secondary" onClick={prev}>
           <FaArrowLeft />
         </button>

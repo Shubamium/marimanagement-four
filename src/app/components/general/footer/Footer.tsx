@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="footer-stats">
           <div className="stats">
             <h2>
-              25+
+              50+
               <img src="/graphic/star1.png" alt="" className="star l" />
               <img src="/graphic/star1.png" alt="" className="star r" />
             </h2>
@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
           <div className="stats">
             <h2>
-              2+
+              3+
               <img src="/graphic/star1.png" alt="" className="star l" />
               <img src="/graphic/star1.png" alt="" className="star r" />
             </h2>
