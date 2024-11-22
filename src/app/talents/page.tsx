@@ -70,7 +70,7 @@ export default async function TalentsPage({}) {
 							
 						`}
             As a token of gratitude for their trust and partnership, all clients
-            listed here can <strong>receive a 20% discount</strong> on their
+            listed here can <strong>receive a 15% discount</strong> on their
             next service, and situational bonuses.. Additionally, they&apos;re
             invited to request more specialized services, tailored to their
             unique needs.
