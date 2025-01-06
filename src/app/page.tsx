@@ -67,14 +67,14 @@ export default async function Home() {
               />
               <h2 className="common-heading">SERVICE</h2>
               <p className="common-p">
-                Take your VTuber career to the next level with my comprehensive
+                {/* Take your VTuber career to the next level with my comprehensive
                 management services, tailored to your needs. Tier 1 is ideal for
                 those seeking a hands-off, advisory approach like a guidance
                 counselor , Tier 2 adds collaborative coaching in similarities
                 to an assistant, and Tier 3 is full-service management where I
                 take care of all logistics like true management. What you see is
                 what you get—no hidden fees, no price changes, just
-                straightforward and transparent pricing.
+                straightforward and transparent pricing. */}
               </p>
             </div>
 
