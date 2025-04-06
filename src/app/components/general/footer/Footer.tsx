@@ -49,7 +49,7 @@ export default function Footer() {
               </p>
 
               <a
-                href="https://x.com/messages/1379171069043564552-1608144670852534272?recipient_id=1379171069043564552&text=Hi%2C%20I%27m%20interested%20in%20hiring%20you%20as%20my%20manager.%20Could%20we%20discuss%20further%20details%3F%20%F0%9F%AA%84%F0%9F%8C%9F%20%F0%9F%93%8B"
+                href="https://x.com/SheepishMari"
                 target="_blank"
                 className="btn btn-secondary"
               >
